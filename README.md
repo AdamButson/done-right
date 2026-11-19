@@ -1,1 +1,8 @@
-# done-right
+# Done Right launcher
+
+Home-screen launcher for GAI Done Right (Georgia Insulation's QA/QC app). The page carries the home-screen icon and forwards to the app; the app itself needs a @georgiainsulation.com sign-in.
+
+- `/` → Live, `/beta/` → Beta.
+- Open the link in Safari, tap Share → Add to Home Screen. The page rewrites its own address to `?go=1`, which is what the home-screen icon saves, so the icon goes straight to the app.
+
+© 2026 Adam Butson. Code for the app is in a private repo.

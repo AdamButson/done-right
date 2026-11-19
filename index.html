@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Done Right</title>
+<meta name="apple-mobile-web-app-title" content="Done Right">
+<meta name="theme-color" content="#222222">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
+<link rel="manifest" href="manifest.webmanifest">
+<script>
+  var APP = "https://script.google.com/a/macros/georgiainsulation.com/s/AKfycby52tiI4Q4fM6bqsqtZ1JeJh9RLqwiPFdmct0duYBMmK0FvapwofzRSK1zKcBvDngH5/exec";
+  if (/[?&]go=1/.test(location.search)) location.replace(APP);
+</script>
+<style>
+  html, body { margin: 0; background: #222; color: #eee; font: 17px/1.45 -apple-system, system-ui, sans-serif; }
+  main { max-width: 420px; margin: 0 auto; padding: 48px 20px; text-align: center; }
+  img { width: 112px; height: 112px; border-radius: 24px; }
+  h1 { font-size: 24px; margin: 16px 0 4px; }
+  .tag { color: #aaa; margin: 0 0 28px; }
+  ol { text-align: left; padding-left: 22px; margin: 0 0 28px; }
+  li { margin: 6px 0; }
+  a.btn { display: inline-block; background: #ed1c24; color: #fff; text-decoration: none; font-weight: 600; padding: 12px 22px; border-radius: 10px; }
+  .small { color: #999; font-size: 14px; margin-top: 28px; }
+</style>
+</head>
+<body>
+<main id="setup" hidden>
+  <img src="icon-180.png" alt="">
+  <h1>Done Right</h1>
+  <p class="tag">Right the first time.</p>
+  <ol>
+    <li>Tap <b>Share</b> (the square with the arrow).</li>
+    <li>Tap <b>Add to Home Screen</b>, then <b>Add</b>.</li>
+    <li>Open Done Right from the new icon.</li>
+  </ol>
+  <a class="btn" id="open" href="#">Open the app now</a>
+  <p class="small">Sign in with your @georgiainsulation.com account. Built by Adam Butson for Georgia Insulation.</p>
+</main>
+<script>
+  if (!/[?&]go=1/.test(location.search)) {
+    document.getElementById("setup").hidden = false;
+    document.getElementById("open").href = APP;
+    history.replaceState(null, "", location.pathname + "?go=1");
+  }
+</script>
+</body>
+</html>
